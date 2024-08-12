@@ -3,6 +3,7 @@ import { useState, useMemo } from "react"
 function BudgetForm() {
   const [budget, setBudget] = useState(0)
 
+  //Setea el valor del input en el state
   const handleChange = (e : React.ChangeEvent<HTMLInputElement>)  => {
     e.preventDefault()
     setBudget(e.target.valueAsNumber)
