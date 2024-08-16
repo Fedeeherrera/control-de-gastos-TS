@@ -5,13 +5,17 @@ function BudgetForm() {
 
   //Setea el valor del input en el state
   const handleChange = (e : React.ChangeEvent<HTMLInputElement>)  => {
-    e.preventDefault()
     setBudget(e.target.valueAsNumber)
   }
 
   const isValid = useMemo(() => {
     return isNaN(budget) || budget <= 0
   }, [budget])
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+  }
 
   return (
     <form className="space-y-5">
